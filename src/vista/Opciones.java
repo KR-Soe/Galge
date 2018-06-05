@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package vista;
+import vista.Menu;
 
 /**
  *
@@ -19,6 +20,7 @@ public class Opciones extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         buttonBorder();
         setResizable(false);
+        
     }
 
     /**
@@ -44,7 +46,11 @@ public class Opciones extends javax.swing.JFrame {
         sldVol = new javax.swing.JSlider();
         jLabel3 = new javax.swing.JLabel();
         btnReturn = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        Title = new javax.swing.JLabel();
+        Resolution1 = new javax.swing.JLabel();
+        BigR = new javax.swing.JButton();
+        MidR = new javax.swing.JButton();
+        SmaR = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -97,11 +103,54 @@ public class Opciones extends javax.swing.JFrame {
         getContentPane().add(btnReturn);
         btnReturn.setBounds(460, 430, 120, 40);
 
-        jLabel2.setFont(new java.awt.Font("Palatino Linotype", 1, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Options");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(190, -10, 190, 110);
+        Title.setFont(new java.awt.Font("Palatino Linotype", 1, 48)); // NOI18N
+        Title.setForeground(new java.awt.Color(255, 255, 255));
+        Title.setText("Options");
+        getContentPane().add(Title);
+        Title.setBounds(190, -10, 190, 110);
+
+        Resolution1.setFont(new java.awt.Font("MV Boli", 1, 36)); // NOI18N
+        Resolution1.setForeground(new java.awt.Color(255, 0, 255));
+        Resolution1.setText("Resolution:");
+        getContentPane().add(Resolution1);
+        Resolution1.setBounds(10, 240, 220, 70);
+
+        BigR.setFont(new java.awt.Font("MV Boli", 1, 24)); // NOI18N
+        BigR.setForeground(new java.awt.Color(255, 0, 255));
+        BigR.setText("800x600");
+        BigR.setContentAreaFilled(false);
+        BigR.setOpaque(false);
+        BigR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BigRActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BigR);
+        BigR.setBounds(260, 370, 160, 40);
+
+        MidR.setFont(new java.awt.Font("MV Boli", 1, 24)); // NOI18N
+        MidR.setForeground(new java.awt.Color(255, 0, 255));
+        MidR.setText("1280X960");
+        MidR.setContentAreaFilled(false);
+        MidR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MidRActionPerformed(evt);
+            }
+        });
+        getContentPane().add(MidR);
+        MidR.setBounds(260, 250, 165, 40);
+
+        SmaR.setFont(new java.awt.Font("MV Boli", 1, 24)); // NOI18N
+        SmaR.setForeground(new java.awt.Color(255, 0, 255));
+        SmaR.setText("1152x864");
+        SmaR.setContentAreaFilled(false);
+        SmaR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SmaRActionPerformed(evt);
+            }
+        });
+        getContentPane().add(SmaR);
+        SmaR.setBounds(260, 310, 160, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/black_texture___ray_by_ethenyl.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -126,6 +175,24 @@ public class Opciones extends javax.swing.JFrame {
         Aviso alert = new Aviso();
         alert.setVisible(true);
     }//GEN-LAST:event_btnApplyActionPerformed
+
+    private void BigRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BigRActionPerformed
+        // TODO add your handling code here:
+        Menu sizeW = new Menu();
+        sizeW.setSize(1280,960);
+    }//GEN-LAST:event_BigRActionPerformed
+
+    private void MidRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MidRActionPerformed
+        // TODO add your handling code here:
+        Menu sizeW = new Menu();
+        sizeW.setSize(1152,864);
+    }//GEN-LAST:event_MidRActionPerformed
+
+    private void SmaRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SmaRActionPerformed
+        // TODO add your handling code here:
+        Menu sizeW = new Menu();
+        sizeW.setSize(800,600);
+    }//GEN-LAST:event_SmaRActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,10 +230,14 @@ public class Opciones extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BigR;
+    private javax.swing.JButton MidR;
+    private javax.swing.JLabel Resolution1;
+    private javax.swing.JButton SmaR;
+    private javax.swing.JLabel Title;
     private javax.swing.JButton btnApply;
     private javax.swing.JButton btnReturn;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JSlider sldVol;
     // End of variables declaration//GEN-END:variables

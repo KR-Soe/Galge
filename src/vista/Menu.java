@@ -1,8 +1,11 @@
 package vista;
 //@author Soe
 
+import javax.swing.*;
+import java.awt.Toolkit.*;
 import java.applet.AudioClip;
 import controladores.SaveLoad;
+import java.awt.Toolkit;
 
 public class Menu extends javax.swing.JFrame {
     
@@ -16,10 +19,12 @@ public class Menu extends javax.swing.JFrame {
         buttonBorder();
         setResizable(false);
         flechas(); 
-        soundB("backG");
-        int h=600;
-        int w= 920;
-        setSize(w, h);      
+        soundB("backG");  
+        ////TAMAÑO VENTANA ////
+        float escalar = 0.5F; // una ventana al 50% del tamaño de la pantalla
+        int ancho = (int)(Toolkit.getDefaultToolkit().getScreenSize(). width*escalar);
+        int alto = (int)(Toolkit.getDefaultToolkit().getScreenSize(). height*escalar);
+        this.setSize(ancho,alto);
         
     }
     public void buttonBorder(){
@@ -41,6 +46,12 @@ public class Menu extends javax.swing.JFrame {
         flechaC.setVisible(false);
         flechaS.setVisible(false);
         flechaE.setVisible(false);
+    }
+    ////////// TAMAÑO VENTANA ///////
+    int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+    int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
+    public void sizeW(){
+        setSize(ancho, alto);
     }
     /////////////////////////////////////////////////////////
                         //////AUDIO/////
@@ -72,7 +83,7 @@ public class Menu extends javax.swing.JFrame {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(980, 605));
+        setMinimumSize(new java.awt.Dimension(900, 600));
         getContentPane().setLayout(null);
 
         flechaE.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N

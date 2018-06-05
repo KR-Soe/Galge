@@ -19,5 +19,6 @@ public class SaveLoad {
     public void setSave(String save) {
         this.save = save;
     }
+    
 }    
 

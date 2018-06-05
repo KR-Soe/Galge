@@ -36,10 +36,11 @@ public class Game extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
+        text = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
-        jLabel3 = new javax.swing.JLabel();
+        character = new javax.swing.JLabel();
+        borderBox = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         bg = new javax.swing.JLabel();
 
@@ -47,11 +48,11 @@ public class Game extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(980, 605));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("BIENVENIDO AL MUNDO DE GEIMU SOE. PARA COMENZAR INDICA TU SEXO");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(250, 400, 630, 70);
+        text.setFont(new java.awt.Font("Segoe Print", 0, 18)); // NOI18N
+        text.setForeground(new java.awt.Color(255, 255, 255));
+        text.setText("BIENVENIDO AL MUNDO DE GEIMU SOE. PARA COMENZAR INDICA ");
+        getContentPane().add(text);
+        text.setBounds(220, 420, 670, 100);
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -62,7 +63,7 @@ public class Game extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(270, 490, 100, 23);
+        jRadioButton1.setBounds(290, 510, 100, 23);
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -73,12 +74,17 @@ public class Game extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(770, 490, 90, 23);
+        jRadioButton2.setBounds(760, 510, 90, 23);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/350px-Portrait_2B_Breaker.png"))); // NOI18N
-        jLabel3.setPreferredSize(new java.awt.Dimension(900, 500));
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(410, -40, 350, 540);
+        character.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/350px-Portrait_2B_Breaker.png"))); // NOI18N
+        character.setPreferredSize(new java.awt.Dimension(900, 500));
+        getContentPane().add(character);
+        character.setBounds(350, -40, 350, 540);
+
+        borderBox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/text.border.png"))); // NOI18N
+        borderBox.setToolTipText("");
+        getContentPane().add(borderBox);
+        borderBox.setBounds(170, 430, 710, 110);
 
         jButton1.setContentAreaFilled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -87,9 +93,9 @@ public class Game extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(0, 0, 900, 410);
+        jButton1.setBounds(0, 0, 910, 430);
 
-        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/black_texture___ray_by_ethenyl.jpg"))); // NOI18N
+        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/skyBg.jpg"))); // NOI18N
         getContentPane().add(bg);
         bg.setBounds(0, 0, 1200, 800);
 
@@ -152,11 +158,12 @@ public class Game extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bg;
+    private javax.swing.JLabel borderBox;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel character;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JLabel text;
     // End of variables declaration//GEN-END:variables
 }
